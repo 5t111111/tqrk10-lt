@@ -32,8 +32,8 @@
 #X obj 473 456 lop~ 500;
 #X msg 552 293 \$1 20 \, 0 180 150;
 #X obj 222 408 lores~ 700;
-#X obj 232 497 *~ 0.2;
 #X obj 267 540 output~;
+#X obj 232 497 *~ 0.3;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 3 0 6 0;
@@ -55,7 +55,7 @@
 #X connect 18 0 2 0;
 #X connect 19 0 2 0;
 #X connect 20 0 2 0;
-#X connect 21 0 32 0;
+#X connect 21 0 33 0;
 #X connect 22 0 25 0;
 #X connect 23 0 30 0;
 #X connect 24 0 2 0;
@@ -79,5 +79,5 @@
 #X connect 28 0 27 0;
 #X connect 30 0 7 0;
 #X connect 31 0 5 0;
-#X connect 32 0 33 0;
-#X connect 32 0 33 1;
+#X connect 33 0 32 0;
+#X connect 33 0 32 1;
