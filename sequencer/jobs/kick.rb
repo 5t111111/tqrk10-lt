@@ -35,5 +35,16 @@ class KickVoiceIn1 < Rukawa::Job
   end
 end
 
-class KickVoiceIn2 < KickPadIn2
+class KickVoiceIn2 < Rukawa::Job
+  def run
+    seq = Nilsteps::Sequencer.new(bpm: 133, osc_port: 22222)
+    seq.setup_steps(0 => 'C1', 4 => 'C1', 8 => 'C1', 12 => 'C1')
+    seq.play(4)
+  end
+end
+
+class KickVoiceIn3 < KickVoiceIn1
+end
+
+class KickVoiceIn4 < KickVoiceIn2
 end

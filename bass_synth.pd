@@ -33,7 +33,7 @@
 #X msg 552 293 \$1 20 \, 0 180 150;
 #X obj 222 408 lores~ 700;
 #X obj 267 540 output~;
-#X obj 232 497 *~ 0.3;
+#X obj 232 497 *~ 0.25;
 #X connect 1 0 0 0;
 #X connect 2 0 3 0;
 #X connect 3 0 6 0;

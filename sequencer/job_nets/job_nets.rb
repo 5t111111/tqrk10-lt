@@ -16,10 +16,17 @@ class SongSequence < Rukawa::JobNet
         Voice => [KickPadIn2],
         SnareRoll => [SnareB],
         KickVoiceIn1 => [KickPadIn2],
-        SnareC => [SnareRoll],
         BassB => [BassA],
-        BassC => [BassB],
+        SnareC => [SnareRoll],
         KickVoiceIn2 => [KickVoiceIn1],
+        BassC => [BassB],
+        SnareD => [SnareC],
+        KickVoiceIn3 => [KickVoiceIn2],
+        BassD => [BassC],
+        SnareE => [SnareD],
+        KickVoiceIn4 => [KickVoiceIn3],
+        BassE => [BassD],
+        SnareF => [SnareE],
       }
     end
   end

@@ -28,6 +28,20 @@ class SnareC < Rukawa::Job
   end
 end
 
+class SnareD < Rukawa::Job
+  def run
+    seq = Nilsteps::Sequencer.new(bpm: 133, osc_port: 22222)
+    seq.setup_steps(4 => 'D1', 12 => 'D1', 15 => 'D1')
+    seq.play(4)
+  end
+end
+
+class SnareE < SnareC
+end
+
+class SnareF < SnareD
+end
+
 class SnareRoll < Rukawa::Job
   def run
     seq = Nilsteps::Sequencer.new(bpm: 133, length: 16, osc_port: 22222)
