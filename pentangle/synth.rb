@@ -15,18 +15,18 @@ Pd.start do |pd|
   mtof = canvas.obj('mtof')
   mul_by_2 = canvas.obj('*', 2)
   sine_osc = canvas.obj('osc~')
-  
+
   sub_by_400 = canvas.obj('-', 400)
   abs = canvas.obj('abs')
   div_by_400 = canvas.obj('/', 400)
   msg_box = canvas.msg_box('\$1 20 \, 0 1000 500')
   vline = canvas.obj('vline~')
-  
+
   mul_audio = canvas.obj('*~')
   sub_audio_by_2 = canvas.obj('/~', 2)
   hip = canvas.obj('hip~', 5)
   dac = canvas.obj('dac~')
-  
+
   osc_dump >> osc_route
   osc_route.outlet(0) >> expr
   expr >> sel
@@ -43,7 +43,7 @@ Pd.start do |pd|
   msg_69 >> mtof
   mtof >> mul_by_2
   mul_by_2 >> sine_osc
-  
+
   osc_route.outlet(1) >> sub_by_400
   sub_by_400 >> abs
   abs >> div_by_400

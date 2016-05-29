@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/5t111111/ruby-puredata.git
+  revision: e6f0b5481a66bc27290f810628dea17630b15ff3
+  branch: add-msgbox
+  specs:
+    puredata (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -34,6 +41,7 @@ PLATFORMS
 
 DEPENDENCIES
   nilsteps
+  puredata!
   rukawa
 
 BUNDLED WITH
