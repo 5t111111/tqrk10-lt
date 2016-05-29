@@ -1,4 +1,4 @@
-#N canvas 420 33 1238 653 12;
+#N canvas 420 33 873 618 12;
 #X obj 445 55 OSC;
 #X msg 445 31 version;
 #X obj 141 322 mtof;

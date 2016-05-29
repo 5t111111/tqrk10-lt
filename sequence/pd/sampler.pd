@@ -1,12 +1,12 @@
-#N canvas 358 277 1273 736 10;
+#N canvas 479 350 1136 716 10;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array kick 12184 float 2;
 #X coords 0 1 12184 -1 200 140 1;
 #X restore 424 45 graph;
 #X obj -202 82 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg -221 469 \; pd dsp \$1;
-#X obj -221 437 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+#X msg -198 361 \; pd dsp \$1;
+#X obj -198 329 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 1 1;
 #N canvas 0 22 450 300 file_read 0;
 #X obj 102 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -19,8 +19,8 @@
 #X connect 3 0 2 0;
 #X coords 0 -1 1 1 20 20 2 100 100;
 #X restore 403 45 pd file_read;
-#X obj -221 390 loadbang;
-#X msg -221 413 1;
+#X obj -198 282 loadbang;
+#X msg -198 305 1;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array snare 11660 float 2;
 #X coords 0 1 11660 -1 200 140 1;
@@ -42,11 +42,11 @@
 #X obj -69 141 *~ 1;
 #X obj -192 170 send~ out_tr1;
 #X obj -40 170 send~ out_tr2;
-#X obj 23 620 dac~;
-#X obj -95 472 receive~ out_tr1;
-#X obj 11 469 receive~ out_tr2;
-#X obj 11 493 hip~ 5;
-#X obj -95 504 hip~ 5;
+#X obj 46 512 dac~;
+#X obj -72 364 receive~ out_tr1;
+#X obj 34 361 receive~ out_tr2;
+#X obj 34 385 hip~ 5;
+#X obj -72 396 hip~ 5;
 #X obj -202 108 tabplay~ kick;
 #X obj -69 114 tabplay~ snare;
 #N canvas 0 22 450 300 (subpatch) 0;
@@ -69,8 +69,8 @@
 #X obj 61 147 *~ 1;
 #X obj 61 118 tabplay~ close_hh;
 #X obj 83 173 send~ out_tr3;
-#X obj 79 516 hip~ 5;
-#X obj 79 492 receive~ out_tr3;
+#X obj 102 408 hip~ 5;
+#X obj 102 384 receive~ out_tr3;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array open_hh 12248 float 2;
 #X coords 0 1 12248 -1 200 140 1 0 0;
@@ -91,8 +91,8 @@
 #X obj 197 150 *~ 1;
 #X obj 197 116 tabplay~ open_hh;
 #X obj 215 175 send~ out_tr4;
-#X obj 98 567 hip~ 5;
-#X obj 98 543 receive~ out_tr4;
+#X obj 121 459 hip~ 5;
+#X obj 121 435 receive~ out_tr4;
 #X obj -202 12 dumpOSC 22222;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array pad 165375 float 2;
@@ -113,8 +113,8 @@
 -1;
 #X obj 208 41 *~ 1;
 #X obj 208 69 send~ out_tr5;
-#X obj 195 633 hip~ 5;
-#X obj 218 547 receive~ out_tr5;
+#X obj 218 525 hip~ 5;
+#X obj 241 439 receive~ out_tr5;
 #X obj 26 34 print unmatch;
 #X obj 208 17 tabplay~ pad;
 #X obj 297 3 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
@@ -138,11 +138,11 @@
 #X coords 0 -1 1 1 20 20 2 100 100;
 #X restore 649 283 pd file_read;
 #X obj -202 41 OSCroute /C1 /D1 /F#1 /A#1 /C2 /D2;
-#X obj 239 487 hip~ 5;
-#X obj 239 463 receive~ out_tr6;
-#X obj 325 512 *~ 0.85;
-#X obj -74 535 *~ 1;
-#X obj 192 579 *~ 0.7;
+#X obj 262 379 hip~ 5;
+#X obj 262 355 receive~ out_tr6;
+#X obj 348 404 *~ 0.85;
+#X obj -51 427 *~ 1;
+#X obj 215 471 *~ 0.7;
 #X connect 1 0 19 0;
 #X connect 3 0 2 0;
 #X connect 5 0 6 0;
